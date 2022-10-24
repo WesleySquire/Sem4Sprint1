@@ -1,0 +1,62 @@
+package main.java;
+
+import java.util.Scanner;
+
+public class Main {
+
+  public static void main(String[] args) {
+
+    final String SET_PLAIN_TEXT = "\033[0;0m";
+    final String SET_BOLD_TEXT = "\033[0;1m";
+
+    Scanner input = new Scanner(System.in);
+
+    System.out.println();
+    System.out.println(SET_BOLD_TEXT + "Country Club, The Golf Club" + SET_PLAIN_TEXT);
+    System.out.println();
+    System.out.println(SET_BOLD_TEXT + "VERSION" + SET_PLAIN_TEXT);
+    System.out.println("  1.0");
+    System.out.println();
+    System.out.println(SET_BOLD_TEXT + "USAGE" + SET_PLAIN_TEXT);
+    System.out.println("  Country Club Staff Only");
+    System.out.println();
+    System.out.println(SET_BOLD_TEXT + "COMMANDS:" + SET_PLAIN_TEXT);
+    System.out.println("  help  Display help for cli");
+    System.out.println("  exit  Exit CLI");
+    System.out.println("  1     Retrieve Member Info");
+    System.out.println("  2     Retrieve Tournament Info");
+
+    String systemInput = "";
+
+    while (systemInput != "exit") {
+      System.out.println();
+      System.out.println(SET_BOLD_TEXT + "Input" + SET_PLAIN_TEXT);
+      systemInput = input.nextLine();
+
+      switch (systemInput) {
+        case "1":
+          ReadFile.readFile("src/data/member.txt");
+          break;
+        case "2":
+          ReadFile.readFile("src/data/tournament.txt");
+          break;
+        case "help":
+          System.out.println();
+          System.out.println(SET_BOLD_TEXT + "COMMANDS:" + SET_PLAIN_TEXT);
+          System.out.println(" help   Display help for cli");
+          System.out.println(" exit   Exit CLI");
+          System.out.println(" 1      Retrieve Member Info");
+          System.out.println(" 2      Retrieve Tournament Info");
+          break;
+        case "exit":
+          System.exit(0);
+        default:
+          System.out.println();
+          System.out.println(SET_BOLD_TEXT + "Unknown Command" + SET_PLAIN_TEXT);
+          System.out.println("Use command 'help' for list of commands");
+          break;
+      }
+    }
+
+  }
+}
