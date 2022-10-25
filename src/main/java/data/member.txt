@@ -1,50 +1,44 @@
-Ned
-2019 Blackbird Circle
-fmcphaden0@merriam-webster.com
-186-513-4448
-July 13th, 2022
-Duration of membership
-Normal
-None
-CJ Cup
-Soon to Come Cup
+Ned Stark
+Winterfell
+nedS@ex.com
+ravenport12
+normal
+$49.99
+Null
+Roberts Rebellion
 
-Norry Lautie
-39 Schurz Circle
-nlautie1@irs.gov
-197-214-9019
-May 20th, 2019
-Duration of membership
-Family Plan (Ted Foister)
-CJ Cup
-Soon to Come Cup
+Robert Baratheon
+Kings Landing
+robB@ex.com
+ravenport13
+family (Cersei Lannister)
+$29.99
+Null
+Roberts Rebellion
 
-Mariette Kauscher
-3 Gale Place
-mkauscher2@nbcnews.com
-191-292-9918
-August 1st, 2020
-Duration of membership
-Special Offer
-CJ Cup
-Soon to Come Cup
+Cersei Lannister
+Kings Landing
+cerL@ex.com
+ravenport13
+family (Robert Baratheon)
+$29.99
+War for Westeros
+Roberts Rebellion
 
-Ted Foister
-1 Northview Junction
-tfoister3@alexa.com
-406-429-6185
-October 22nd, 2022
-Duration of membership
-Family Plan (Norry Lautie)
-CJ Cup
-Soon to Come Cup
+John Snow
+Winterfell
+JS@ex.com
+ravenport08
+trial
+$14.99
+War for Westeros
+Null
 
-Danila Sleeny
-5 Raven Pass
-dsleeny4@narod.ru
-491-303-1979
-May 20th, 2019
-Duration of membership
-Normal
-CJ Cup
-Soon to Come Cup
+Daenerys Targaryen
+DragonStone
+DT@ex.com
+ravenport72
+special offer
+$39.99
+War for Westeros
+Roberts Rebbelion
