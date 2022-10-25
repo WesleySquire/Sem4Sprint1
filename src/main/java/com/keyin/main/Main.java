@@ -1,4 +1,4 @@
-package main.java;
+package com.keyin.main;
 
 import java.util.Scanner;
 
@@ -36,16 +36,16 @@ public class Main {
 
       switch (systemInput) {
         case "1":
-          ReadFile.readFile("Sem4Sprint1/data/member.txt");
+          ReadFile.readFile("src/main/java/data/member.txt");
           break;
         case "2":
-          ReadFile.readFile("Sem4Sprint1/data/tournament.txt");
+          ReadFile.readFile("src/main/java/data/tournament.txt");
           break;
         case "3":
           System.out.println();
           System.out.println(SET_BOLD_TEXT + "Enter Name" + SET_PLAIN_TEXT);
           String search = input.nextLine();
-          ReadFile.searchFile("Sem4Sprint1/data/member.txt", search);
+          ReadFile.searchFile("src/main/java/data/member.txt", search);
           break;
         case "help":
           System.out.println();
