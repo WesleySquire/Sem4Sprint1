@@ -47,6 +47,7 @@ public class Main {
     System.out.println("  1     Retrieve All Member Info");
     System.out.println("  2     Retrieve All Tournament Info");
     System.out.println("  3     Search Member Info");
+    System.out.println("  4     Create New Member");
 
     String systemInput = "";
 
@@ -68,14 +69,53 @@ public class Main {
           String search = input.nextLine();
           ReadFile.searchFile("src/main/java/data/member.txt", search);
           break;
+        case "4":
+          Boolean created = false;
+
+          while (created == false) {
+            System.out.println(SET_BOLD_TEXT + "Creating New Member..." + SET_PLAIN_TEXT);
+            System.out.println("Enter Name");
+            String input1, input2, input3, input4, input5, input6, input7, input8;
+            input1 = input.nextLine();
+            System.out.println("Enter Address");
+            input2 = input.nextLine();
+            System.out.println("Enter Email");
+            input3 = input.nextLine();
+            System.out.println("Enter Phone Number");
+            input4 = input.nextLine();
+            System.out.println("Enter Membership Type");
+            input5 = input.nextLine();
+            System.out.println("Enter Tournaments Currently Participating In");
+            input6 = input.nextLine();
+            System.out.println("Enter Past Tournaments Participated In");
+            input7 = input.nextLine();
+
+            Member mCreate = new Member(input1, input2, input3, input4, input5, input6, input7);
+
+            System.out.println(SET_BOLD_TEXT + "Confirm..." + SET_PLAIN_TEXT);
+            System.out.println("Y/N");
+            System.out.println();
+            System.out.println(mCreate.toString());
+            input8 = input.nextLine();
+            switch (input8.toLowerCase()){
+              case "y":
+                mCreate.saveMember();
+                created = true;
+                break;
+              default:
+                created = false;
+            }
+          }
+
         case "help":
           System.out.println();
           System.out.println(SET_BOLD_TEXT + "COMMANDS:" + SET_PLAIN_TEXT);
           System.out.println(" help   Display help for cli");
           System.out.println(" exit   Exit CLI");
-          System.out.println(" 1      Retrieve Member Info");
-          System.out.println(" 2      Retrieve Tournament Info");
+          System.out.println(" 1      Retrieve All Member Info");
+          System.out.println(" 2      Retrieve All Tournament Info");
           System.out.println(" 3      Search Member Info");
+          System.out.println(" 4      Create New Member");
           break;
         case "exit":
           System.exit(0);
