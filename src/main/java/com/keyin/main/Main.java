@@ -16,16 +16,6 @@ public class Main {
     Member m5 = new Member("Daenerys Targaryen", "DragonStone", "DT@ex.com", "ravenport72", "special offer", "War for Westeros", "Roberts Rebbelion");
     Tournaments t1 = new Tournaments("Roberts Rebellion", "Kings Landing", "Ned Stark, Robert Baratheon, Cersei Lannister, Daenerys Targaryen", "1st: Robert Baratheon 2nd: Cersei Lannister 3rd: Ned Stark", "282 AD", "283 AD", 15000.00, 10000000.00);
     Tournaments t2 = new Tournaments("War for Westeros", "Kings Landing", "Cersei Lannister, Daenerys Targaryen, John Snow", "1st: John Snow 2nd: Daenerys Targaryen 3rd: Cersei Lannister", "304 AC", "305 AC", 1500000.00, 10000000000.00);
-    List<Member> memberList = new ArrayList<Member>();
-    List<Tournaments> tournList = new ArrayList<Tournaments>();
-    memberList.add(m1);
-    memberList.add(m2);
-    memberList.add(m3);
-    memberList.add(m4);
-    memberList.add(m5);
-    tournList.add(t1);
-    tournList.add(t2);
-
 
     final String SET_PLAIN_TEXT = "\033[0;0m";
     final String SET_BOLD_TEXT = "\033[0;1m";
@@ -36,7 +26,7 @@ public class Main {
     System.out.println(SET_BOLD_TEXT + "Country Club, The Golf Club" + SET_PLAIN_TEXT);
     System.out.println();
     System.out.println(SET_BOLD_TEXT + "VERSION" + SET_PLAIN_TEXT);
-    System.out.println("  1.3");
+    System.out.println("  1.4");
     System.out.println();
     System.out.println(SET_BOLD_TEXT + "USAGE" + SET_PLAIN_TEXT);
     System.out.println("  Country Club Staff Only");
@@ -48,6 +38,7 @@ public class Main {
     System.out.println("  2     Retrieve All Tournament Info");
     System.out.println("  3     Search Member Info");
     System.out.println("  4     Create New Member");
+    System.out.println("  5     Create New Tournament");
 
     String systemInput = "";
 
@@ -107,6 +98,50 @@ public class Main {
             }
           }
 
+        case "5":
+          created = false;
+
+          while (created == false) {
+            System.out.println(SET_BOLD_TEXT + "Creating New Member..." + SET_PLAIN_TEXT);
+            System.out.println("Enter Tournaments Name");
+            String input1, input2, input3, input4, input5, input6, input7, input8, input9;
+            input1 = input.nextLine();
+            System.out.println("Enter Tournaments Location");
+            input2 = input.nextLine();
+            System.out.println("Enter Participating Members");
+            input3 = input.nextLine();
+            System.out.println("Enter Final Standing");
+            input4 = input.nextLine();
+            System.out.println("Enter Start Date");
+            input5 = input.nextLine();
+            System.out.println("Enter End Date");
+            input6 = input.nextLine();
+            System.out.println("Enter Entree Fee");
+            input7 = input.nextLine();
+            System.out.println("Enter Prize Pool");
+            input8 = input.nextLine();
+
+            double dInput7 = Double.parseDouble(input7);
+            double dInput8 = Double.parseDouble(input8);
+            Tournaments tCreate = new Tournaments(input1, input2, input3, input4, input5, input6, dInput7, dInput8);
+
+
+            System.out.println(SET_BOLD_TEXT + "Confirm..." + SET_PLAIN_TEXT);
+            System.out.println("Y/N");
+            System.out.println();
+            System.out.println(tCreate.toString());
+            input9 = input.nextLine();
+            switch (input9.toLowerCase()){
+              case "y":
+                tCreate.saveTourn();
+                created = true;
+                break;
+              default:
+                created = false;
+
+            }
+          }
+
         case "help":
           System.out.println();
           System.out.println(SET_BOLD_TEXT + "COMMANDS:" + SET_PLAIN_TEXT);
@@ -116,6 +151,7 @@ public class Main {
           System.out.println(" 2      Retrieve All Tournament Info");
           System.out.println(" 3      Search Member Info");
           System.out.println(" 4      Create New Member");
+          System.out.println(" 5      Create New Tournament");
           break;
         case "exit":
           System.exit(0);

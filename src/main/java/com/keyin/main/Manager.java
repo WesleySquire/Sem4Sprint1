@@ -17,6 +17,15 @@ public class Manager {
         return memberToReturn;
     }
 
+    public List<Tournaments> getAllTourn(){
+        List<Tournaments> tournaments = database.getAllTourn();
+        List<Tournaments> tournToReturn = new ArrayList<Tournaments>();
+        for (Tournaments t : tournaments){
+            tournToReturn.add(t);
+        }
+        return tournToReturn;
+    }
+
     public Database getDatabase() {
         return database;
     }
