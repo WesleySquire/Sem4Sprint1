@@ -79,23 +79,25 @@ public class Main {
             input7 = input.nextLine();
 
             Member mCreate = new Member(input1, input2, input3, input4, input5, input6, input7);
-
+            System.out.println();
             System.out.println(SET_BOLD_TEXT + "Confirm..." + SET_PLAIN_TEXT);
             System.out.println("Y/N");
             System.out.println();
             System.out.println(mCreate.toString());
             input8 = input.nextLine();
 //            If confirm is yes create/save the new member and leave loop
+
             switch (input8.toLowerCase()){
               case "y":
                 mCreate.saveMember();
                 created = true;
-                break;
+              break;
               default:
                 created = false;
             }
-          }
 
+          }
+          break;
         case "5":
           created = false;
 //        While new tourn is NOT created keep running loop
@@ -140,6 +142,7 @@ public class Main {
 
             }
           }
+          break;
 
 //        Displays help
         case "help":
