@@ -1,0 +1,18 @@
+Roberts Rebellion
+Kings Landing
+Ned Stark, Robert Baratheon, Cersei Lannister, Daenerys Targaryen
+1st: Robert Baratheon 2nd: Cersei Lannister 3rd: Ned Stark
+282 AD
+283 AD
+15000.0
+1.0E7
+
+War for Westeros
+Kings Landing
+Cersei Lannister, Daenerys Targaryen, John Snow
+1st: John Snow 2nd: Daenerys Targaryen 3rd: Cersei Lannister
+304 AC
+305 AC
+1500000.0
+1.0E10
+

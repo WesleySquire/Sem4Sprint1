@@ -1,0 +1,45 @@
+Ned Stark
+Winterfell
+nedS@ex.com
+ravenport12
+normal
+$49.99
+Null
+Roberts Rebellion
+
+Robert Baratheon
+Kings Landing
+robB@ex.com
+ravenport13
+family (Cersei Lannister)
+$29.99
+Null
+Roberts Rebellion
+
+Cersei Lannister
+Kings Landing
+cerL@ex.com
+ravenport13
+family (Robert Baratheon)
+$29.99
+War for Westeros
+Roberts Rebellion
+
+John Snow
+Winterfell
+JS@ex.com
+ravenport08
+trial
+$14.99
+War for Westeros
+Null
+
+Daenerys Targaryen
+DragonStone
+DT@ex.com
+ravenport72
+special offer
+$39.99
+War for Westeros
+Roberts Rebbelion
+
