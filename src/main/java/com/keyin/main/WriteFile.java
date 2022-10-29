@@ -6,6 +6,7 @@ import java.io.FileWriter;
 
 public class WriteFile {
 
+//    Writes to file for Member constructor
     public static void writeFileMember(File fileLocation, Member member){
         try {
             FileWriter fw = new FileWriter(fileLocation.getAbsoluteFile(), true);
@@ -18,6 +19,7 @@ public class WriteFile {
         }
     }
 
+//    Writes to file for Tournament constructor
     public static void writeFileTourn(File fileLocation, Tournaments tournaments){
         try {
             FileWriter fw = new FileWriter(fileLocation.getAbsoluteFile(), true);

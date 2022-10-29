@@ -6,6 +6,7 @@ import java.io.IOException;
 
 public class ReadFile {
 
+//  read file
   public static Boolean readFile(String fileLocation) {
     try {
       System.out.println();
@@ -27,6 +28,7 @@ public class ReadFile {
     }
   }
 
+//  Search file using member name
   public static void searchFile(String fileLocation, String search) {
     Boolean found = false;
     try {

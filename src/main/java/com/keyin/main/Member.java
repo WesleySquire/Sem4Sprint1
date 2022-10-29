@@ -4,7 +4,9 @@ package com.keyin.main;
 
 import java.io.File;
 
+
 public class Member {
+//    File location for storage
     File file = new File("src/main/java/data/member.txt");
     private String name, address, email, phoneNum, membershipType, currTourn, pastTourn;
     private double memCost;
@@ -14,7 +16,7 @@ public class Member {
         this.email = email;
         this.phoneNum = phoneNum;
         this.membershipType = membershipType;
-
+//        Switch statement for membership cost depending on mem Type
         switch (membershipType){
             case "normal":
                 this.memCost = 49.99;
@@ -41,6 +43,7 @@ public class Member {
                 + "\n" + "$" + this.memCost + "\n" + this.currTourn + "\n" + this.pastTourn + "\n" + "\n");
     }
 
+//    Save to file.
     public void saveMember(){
         WriteFile.writeFileMember(file, this);
     }

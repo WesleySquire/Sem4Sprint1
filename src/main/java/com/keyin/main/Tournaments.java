@@ -4,6 +4,7 @@ import java.io.File;
 
 public class Tournaments {
 
+//    File location for storage
     File file = new File("src/main/java/data/tournament.txt");
     private String name, location, partMembers, finalStanding;
     private String startDate, endDate;

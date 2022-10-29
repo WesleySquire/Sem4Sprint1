@@ -9,24 +9,17 @@ import com.keyin.main.Tournaments;
 public class Main {
 
   public static void main(String[] args) {
-    Member m1 = new Member("Ned Stark", "Winterfell", "nedS@ex.com", "ravenport12", "normal", "Null", "Roberts Rebellion");
-    Member m2 = new Member("Robert Baratheon", "Kings Landing", "robB@ex.com", "ravenport13", "family (Cersei Lannister)", "Null", "Roberts Rebellion");
-    Member m3 = new Member("Cersei Lannister", "Kings Landing", "cerL@ex.com", "ravenport13", "family (Robert Baratheon)", "War for Westeros", "Roberts Rebellion");
-    Member m4 = new Member("John Snow", "Winterfell", "JS@ex.com", "ravenport08", "trial", "War for Westeros", "Null");
-    Member m5 = new Member("Daenerys Targaryen", "DragonStone", "DT@ex.com", "ravenport72", "special offer", "War for Westeros", "Roberts Rebbelion");
-    Tournaments t1 = new Tournaments("Roberts Rebellion", "Kings Landing", "Ned Stark, Robert Baratheon, Cersei Lannister, Daenerys Targaryen", "1st: Robert Baratheon 2nd: Cersei Lannister 3rd: Ned Stark", "282 AD", "283 AD", 15000.00, 10000000.00);
-    Tournaments t2 = new Tournaments("War for Westeros", "Kings Landing", "Cersei Lannister, Daenerys Targaryen, John Snow", "1st: John Snow 2nd: Daenerys Targaryen 3rd: Cersei Lannister", "304 AC", "305 AC", 1500000.00, 10000000000.00);
-
+//    Make certain things bold in prints
     final String SET_PLAIN_TEXT = "\033[0;0m";
     final String SET_BOLD_TEXT = "\033[0;1m";
-
+    
     Scanner input = new Scanner(System.in);
-
+//  CLI prints
     System.out.println();
     System.out.println(SET_BOLD_TEXT + "Country Club, The Golf Club" + SET_PLAIN_TEXT);
     System.out.println();
     System.out.println(SET_BOLD_TEXT + "VERSION" + SET_PLAIN_TEXT);
-    System.out.println("  1.4");
+    System.out.println("  1.7");
     System.out.println();
     System.out.println(SET_BOLD_TEXT + "USAGE" + SET_PLAIN_TEXT);
     System.out.println("  Country Club Staff Only");
@@ -41,28 +34,32 @@ public class Main {
     System.out.println("  5     Create New Tournament");
 
     String systemInput = "";
-
+//    while loop so cli is continuous until exit command is used
     while (systemInput != "exit") {
       System.out.println();
       System.out.println(SET_BOLD_TEXT + "Input" + SET_PLAIN_TEXT);
       systemInput = input.nextLine();
 
+//      Switch for cli inputs
       switch (systemInput) {
         case "1":
+//          Reading member file
           ReadFile.readFile("src/main/java/data/member.txt");
           break;
         case "2":
+//          Reading tourn file
           ReadFile.readFile("src/main/java/data/tournament.txt");
           break;
         case "3":
           System.out.println();
           System.out.println(SET_BOLD_TEXT + "Enter Name" + SET_PLAIN_TEXT);
           String search = input.nextLine();
+//          searching member file by name
           ReadFile.searchFile("src/main/java/data/member.txt", search);
           break;
         case "4":
           Boolean created = false;
-
+//          While new member is NOT created keep doing loop
           while (created == false) {
             System.out.println(SET_BOLD_TEXT + "Creating New Member..." + SET_PLAIN_TEXT);
             System.out.println("Enter Name");
@@ -88,6 +85,7 @@ public class Main {
             System.out.println();
             System.out.println(mCreate.toString());
             input8 = input.nextLine();
+//            If confirm is yes create/save the new member and leave loop
             switch (input8.toLowerCase()){
               case "y":
                 mCreate.saveMember();
@@ -100,9 +98,9 @@ public class Main {
 
         case "5":
           created = false;
-
+//        While new tourn is NOT created keep running loop
           while (created == false) {
-            System.out.println(SET_BOLD_TEXT + "Creating New Member..." + SET_PLAIN_TEXT);
+            System.out.println(SET_BOLD_TEXT + "Creating New Tournament..." + SET_PLAIN_TEXT);
             System.out.println("Enter Tournaments Name");
             String input1, input2, input3, input4, input5, input6, input7, input8, input9;
             input1 = input.nextLine();
@@ -131,6 +129,7 @@ public class Main {
             System.out.println();
             System.out.println(tCreate.toString());
             input9 = input.nextLine();
+//            If confirmation is yes save/create new tourn
             switch (input9.toLowerCase()){
               case "y":
                 tCreate.saveTourn();
@@ -142,6 +141,7 @@ public class Main {
             }
           }
 
+//        Displays help
         case "help":
           System.out.println();
           System.out.println(SET_BOLD_TEXT + "COMMANDS:" + SET_PLAIN_TEXT);
@@ -153,8 +153,11 @@ public class Main {
           System.out.println(" 4      Create New Member");
           System.out.println(" 5      Create New Tournament");
           break;
+
+//          Exits prgram
         case "exit":
           System.exit(0);
+//          Default to unkown command
         default:
           System.out.println();
           System.out.println(SET_BOLD_TEXT + "Unknown Command" + SET_PLAIN_TEXT);

@@ -1,18 +1,18 @@
-Title: CJ Cup
-Start date: October 20, 2022
-End date: October 30, 2022
-Location: Ridgleland, SC
-Entry Fee: $1000000
-Cash Prize Amount: $10500000
-Participating Members: Norry Lautie, Mariette Kauscher, Ted Foister, Danila Sleeny, Filippa McPhaden
-1st: Ted Foister 2nd: Mariette Kauscher 3rd: Norry Lautie
+Roberts Rebellion
+Kings Landing
+Ned Stark, Robert Baratheon, Cersei Lannister, Daenerys Targaryen
+1st: Robert Baratheon 2nd: Cersei Lannister 3rd: Ned Stark
+282 AD
+283 AD
+15000.0
+1.0E7
 
-Title: Soon to Come Cup
-Start date: Sept 1, 2023
-End date: Sept 3, 2023
-Location: St.Johns, NL
-Entry Fee: $10000
-Cash Prize Amount: $1500000
-Participating Members: Norry Lautie, Mariette Kauscher, Ted Foister, Danila Sleeny, Filippa McPhaden
-Null
+War for Westeros
+Kings Landing
+Cersei Lannister, Daenerys Targaryen, John Snow
+1st: John Snow 2nd: Daenerys Targaryen 3rd: Cersei Lannister
+304 AC
+305 AC
+1500000.0
+1.0E10
 
